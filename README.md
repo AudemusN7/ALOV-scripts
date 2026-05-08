@@ -51,6 +51,8 @@ pip install PySide 6
 
 ### Legacy
 
+The previous version of ALOV tools by HarHarLinks is located in SanityCheckLegacy.
+
 This repo contains `index`es of the games (`MEX_complete.json`), so I don't expect you'd need to run the `index` mode.
 Next to the `MEX_complete.json` databases, there is also `folder_mappings.json`.
 This is needed for `--check`, because the directory structure of an ALOV release may not be the same of the installed game.
