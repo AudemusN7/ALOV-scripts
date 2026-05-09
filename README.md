@@ -10,7 +10,7 @@ They are not redistributed with ALOV-scripts to avoid licensing issues and to al
 The ALOV Sanity Checker is used to largely automate checking ALOV for integrity before release. Thus its releases happen in correspondence with ALOV itself.
 The v2 GUI tool for ALOV LE provides an interface to automate the verification of high-fidelity video masters (ProRes MOV) and final game-ready files (Bink) against a strict reference database.
 
-The tool ensures that hundreds of video files across LE1, LE2, LE3 archives adhere to exact project standards before deployment. A CSV table is now used for reference [link here] with data on frame rate, frame count and source location. The sanity checker specifically checks for:
+The tool ensures that hundreds of video files across LE1, LE2, LE3 archives adhere to exact project standards before deployment. A [CSV table](https://docs.google.com/spreadsheets/d/1CNtXA-V2Q5RQNU7k-ARGR77k5vQy_m3eKBALGO6n-9M/edit?gid=660923023#gid=660923023) is now used for reference with data on frame rate, frame count and source location. The sanity checker specifically checks for:
 - Frame Mismatches: Detecting if a file's actual frame count differs from the expected vanilla or interpolated count.
 - Resolution Drift Verifying that all assets remain at the required 3840x2160 resolution.
 - Codec Quality Issues: Ensuring master files use high-quality ProRes profiles (HQ/Standard) and flagging low-bitrate variants like Proxy or LT.
@@ -45,6 +45,7 @@ This GUI tool is built specifically for the ALOV workflow, with a present CLI ar
 
 Both tools make use of ffprobe, though it is optional for the Batch Binker.
 Batch Binker requires Bink2ForUnreal. While any version will work with this tool, ALOV for LE specifically requires outputting Bink2 files from version 2022.05
+Sanity Checker requires a specially formatted CSV table [which can be downloaded here](https://docs.google.com/spreadsheets/d/1CNtXA-V2Q5RQNU7k-ARGR77k5vQy_m3eKBALGO6n-9M/edit?gid=660923023#gid=660923023)
 To build locally:
 
 pip install PySide 6
