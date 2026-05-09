@@ -1,0 +1,558 @@
+File Name,Source,Vanilla FPS,Vanilla Frames,Interpolated Frames,Is Interpolated,Excluded (MOV),Excluded (BIK),Exclusion Reason
+artifact_movie_01.bik,LE1,30,8,16,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_02.bik,LE1,30,8,16,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_03.bik,LE1,30,13,26,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_04.bik,LE1,30,19,38,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_05.bik,LE1,30,20,40,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_06.bik,LE1,30,10,20,NO,NO,NO,Beacon vision videos not suited for interpolation
+artifact_movie_07.bik,LE1,30,12,24,NO,NO,NO,Beacon vision videos not suited for interpolation
+Citadel_Est.bik,LE1,30,360,720,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+DLC_UNC_Ending.bik,LE1,30,400,800,YES,NO,NO,
+DLC_UNC_Opening.bik,LE1,30,1004,2008,YES,NO,NO,
+END_70_C_Attack_Evil_CUT_01.bik,LE1,30,662,1324,YES,NO,NO,
+END_70_C_Attack_Evil_CUT_02.bik,LE1,30,744,1488,YES,NO,NO,
+END_70_C_Attack_Good_CUT_01.bik,LE1,30,463,926,YES,NO,NO,
+END_70_C_Attack_Good_CUT_02.bik,LE1,30,1073,2146,YES,NO,NO,
+END_90_F_SovereignDead_CUT_01.bik,LE1,30,658,1316,YES,NO,NO,
+END_90_F_SovereignDead_CUT_02.bik,LE1,30,159,318,YES,NO,NO,
+END_90_F_SovereignDead_CUT_03.bik,LE1,30,560,1120,YES,NO,NO,
+END_90_F_SovereignDead_CUT_04.bik,LE1,30,208,416,YES,NO,NO,
+END_90_F_SovereignDead_CUT_05.bik,LE1,30,243,486,YES,NO,NO,
+END_90_SovereignGood_CUT_01.bik,LE1,30,667,1334,YES,NO,NO,
+GLO_01_Relay.bik,LE1,30,270,540,YES,NO,NO,
+GLO_Relay_LOAD.bik,LE1,30,399,798,YES,NO,NO,
+Jug_70_Beacon_CUT_01.bik,LE1,29.97,3,6,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_02.bik,LE1,29.97,10,20,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_03.bik,LE1,29.97,12,24,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_04.bik,LE1,29.97,4,8,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_05.bik,LE1,29.97,27,54,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_06.bik,LE1,29.97,6,12,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_07.bik,LE1,29.97,6,12,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_08.bik,LE1,29.97,7,14,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_09.bik,LE1,29.97,7,14,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_10.bik,LE1,29.97,12,24,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_11.bik,LE1,29.97,7,14,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_12.bik,LE1,29.97,12,24,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_13.bik,LE1,29.97,23,46,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_14.bik,LE1,29.97,22,44,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_15.bik,LE1,29.97,19,38,NO,NO,NO,Beacon vision videos not suited for interpolation
+Jug_70_Beacon_CUT_16.bik,LE1,29.97,29,58,NO,NO,NO,Beacon vision videos not suited for interpolation
+load_f98.bik,LE1,29.97,27,54,NO,YES,YES,Unused in-game
+LOS_40_J_Attack_CUT_01.bik,LE1,30,1099,2198,YES,NO,NO,
+Mass_Effect_Logo_Movie.bik,LE1,30,230,460,NO,NO,NO,"Pointless to interpolate, already looks smooth"
+MEvisionSEQ3.bik,LE1,30,963,1926,NO,NO,NO,Beacon vision videos not suited for interpolation
+PRO_20_E_asariopening.bik,LE1,30,186,372,YES,NO,NO,
+STA_30_F_docking.bik,LE1,30,508,1016,YES,YES,YES,"Unused in-game due to LE1 Community Patch, removed from ALOV"
+STA_ArrivalSEQ01.bik,LE1,30,970,1940,YES,NO,NO,
+STA_ArrivalSEQ02.bik,LE1,30,201,402,YES,NO,NO,
+STA_ArrivalSEQ03.bik,LE1,30,265,530,YES,NO,NO,
+STA_ArrivalSEQ04.bik,LE1,30,176,352,YES,NO,YES,"Unused in-game due to LE1 Community Patch, removed from ALOV but MOV still needs checking"
+STA_ArrivalSEQ04a.bik,LE1,30,214,428,YES (BIK ONLY),YES,NO,LE1CP video - BIK only
+sunset.bik,LE1,30,478,956,YES,NO,NO,
+UCW_Loading_Flyby.bik,LE1,30,150,300,YES,NO,NO,
+UplinkSEQ01.bik,LE1,30,533,1066,YES,NO,NO,
+UplinkSEQ02.bik,LE1,30,1793,3586,YES,NO,NO,
+Arv_100_AstArrival.bik,LE2/ARRIVAL,30,488,976,YES,NO,NO,
+Arv_Climax_Failure.bik,LE2/ARRIVAL,30,814,1628,YES (BIK ONLY),YES,NO,"This is a trucated version of Arv_Climax_Sht2, so is produced from that MOV instead"
+Arv_Climax_Sht1.bik,LE2/ARRIVAL,30,60,120,YES,NO,NO,
+Arv_Climax_Sht2.bik,LE2/ARRIVAL,30,1112,2224,YES,NO,NO,
+Arv_FlashRelay.bik,LE2/ARRIVAL,30,60,120,YES,NO,NO,
+Arv_Flash_marker.bik,LE2/ARRIVAL,30,285,570,NO,NO,NO,"Too many rapid flashing images, not suited for interpolation"
+BlbGtl_100_Arrival1.bik,LE2/BASEGAME,30,408,816,YES,NO,NO,
+BlbGtl_100_Depart_Bad.bik,LE2/BASEGAME,30,439,878,YES,NO,NO,
+BlbGtl_100_Depart_Good.bik,LE2/BASEGAME,30,429,858,YES,NO,NO,
+CitHub_Arrival.bik,LE2/BASEGAME,30,1143,2286,YES,NO,NO,
+CitHub_Depart.bik,LE2/BASEGAME,30,514,1028,YES,NO,NO,
+Crit03_CollectArrive_Part1_2.bik,LE2/BASEGAME,30,308,616,YES,NO,NO,
+Crit03_CollectArrive_Part2_1.bik,LE2/BASEGAME,30,111,222,YES,NO,NO,
+Crit03_CollectArrive_Part2_2.bik,LE2/BASEGAME,30,272,544,YES,NO,NO,
+Crt03_Dept.bik,LE2/BASEGAME,30,101,202,YES,NO,NO,
+CrtKrL_100_CraterArrival.bik,LE2/BASEGAME,30,730,1460,YES,NO,NO,
+End02_Huddle01_Est.bik,LE2/BASEGAME,30,340,680,YES,NO,NO,
+End03_Flyby.bik,LE2/BASEGAME,30,399,798,YES,NO,NO,
+EndGm1_ArrivalEXT_Part1.bik,LE2/BASEGAME,30,78,156,YES,NO,NO,
+EndGm1_ArrivalEXT_Part2.bik,LE2/BASEGAME,30,58,116,YES,NO,NO,
+EndGm1_ArrivalEXT_Part3.bik,LE2/BASEGAME,30,222,444,YES,NO,NO,
+EndGm1_ArrivalEXT_Part4.bik,LE2/BASEGAME,30,403,806,YES,NO,NO,
+EndGm1_ArrivalEXT_Part5.bik,LE2/BASEGAME,30,252,504,YES,NO,NO,
+Endgm1_Crashland_EXT01.bik,LE2/BASEGAME,30,81,162,YES,NO,NO,
+Endgm1_Crashland_EXT02.bik,LE2/BASEGAME,30,203,406,YES,NO,NO,
+Endgm1_Crashland_EXT03.bik,LE2/BASEGAME,30,150,300,YES,NO,NO,
+EndGm1_DebrisChase01.bik,LE2/BASEGAME,30,152,304,YES,NO,NO,
+EndGm1_DebrisChase02.bik,LE2/BASEGAME,30,134,268,YES,NO,NO,
+EndGm1_DebrisChase03.bik,LE2/BASEGAME,30,88,176,YES,NO,NO,
+EndGm1_DebrisChase05.bik,LE2/BASEGAME,30,83,166,YES,NO,NO,
+EndGm1_DebrisChase06.bik,LE2/BASEGAME,30,131,262,YES,NO,NO,
+EndGm1_DebrisChase07.bik,LE2/BASEGAME,30,54,108,YES,NO,NO,
+EndGm1_DebrisChase08.bik,LE2/BASEGAME,30,70,140,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part1.bik,LE2/BASEGAME,30,535,1070,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part1_2.bik,LE2/BASEGAME,30,153,306,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part2.bik,LE2/BASEGAME,30,76,152,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part3.bik,LE2/BASEGAME,30,154,308,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part4.bik,LE2/BASEGAME,30,81,162,YES,NO,NO,
+EndGm1_DogFight_OculusIntro_Part5.bik,LE2/BASEGAME,30,569,1138,YES,NO,NO,
+EndGm1_JumpDriveExt_Part1.bik,LE2/BASEGAME,30,300,600,YES,NO,NO,
+EndGm1_JumpDriveExt_Part2.bik,LE2/BASEGAME,30,75,150,YES,NO,NO,
+Endgm1_JumpDriveExt_Part3.bik,LE2/BASEGAME,30,104,208,YES,NO,NO,
+Endgm1_Warship_EXT01.bik,LE2/BASEGAME,30,227,454,YES,NO,NO,
+Endgm1_Warship_EXT02.bik,LE2/BASEGAME,30,132,264,YES,NO,NO,
+Endgm1_Warship_EXT03.bik,LE2/BASEGAME,30,1045,2090,YES,NO,NO,
+Endgm1_Warship_EXT04.bik,LE2/BASEGAME,30,195,390,YES,NO,NO,
+Endgm1_Warship_Fail_EXT01.bik,LE2/BASEGAME,30,96,192,YES,NO,NO,
+Endgm1_Warship_Fail_EXT02.bik,LE2/BASEGAME,30,132,264,YES,NO,NO,
+Endgm1_Warship_Fail_EXT03.bik,LE2/BASEGAME,30,164,328,YES,NO,NO,
+Endgm1_Warship_Succ_EXT01.bik,LE2/BASEGAME,30,248,496,YES,NO,NO,
+Endgm1_Warship_Succ_EXT02.bik,LE2/BASEGAME,30,213,426,YES,NO,NO,
+Endgm1_Warship_Succ_EXT03.bik,LE2/BASEGAME,30,252,504,YES,NO,NO,
+EndGm2_CollectorExplode.bik,LE2/BASEGAME,30,1659,3318,YES,NO,NO,
+EndGm2_CollectorRadiation.bik,LE2/BASEGAME,30,1659,3318,YES,NO,NO,
+EndGm2_collectortalk.bik,LE2/BASEGAME,30,117,234,YES,NO,NO,
+EndGm2_RunDept_pt1.bik,LE2/BASEGAME,30,108,216,YES,NO,NO,
+EndGm2_RunDept_pt2.bik,LE2/BASEGAME,30,89,178,YES,NO,NO,
+EndGm3_Reapers.bik,LE2/BASEGAME,30,263,526,YES,NO,NO,
+GLO_01_Relay.bik,LE2/BASEGAME,30,168,336,YES,NO,NO,
+HorCr1_202_Capture.bik,LE2/BASEGAME,29.954,1623,3246,YES,NO,NO,
+horcr1_302_collectordepart1.bik,LE2/BASEGAME,30,210,420,YES,NO,NO,
+horcr1_302_collectordepart2.bik,LE2/BASEGAME,30,239,478,YES,NO,NO,
+HorCr1_LilthArrival.bik,LE2/BASEGAME,30,204,408,YES,NO,NO,
+JunCvl_400_Departure_01.bik,LE2/BASEGAME,30,198,396,YES,NO,NO,
+JunCvl_400_Departure_02.bik,LE2/BASEGAME,30,166,332,YES,NO,NO,
+JunCvl_400_Departure_03.bik,LE2/BASEGAME,30,87,174,YES,NO,NO,
+KroHub_Arrival.bik,LE2/BASEGAME,30,288,576,YES,NO,NO,
+KroHub_Depart.bik,LE2/BASEGAME,30,278,556,YES,NO,NO,
+load_f01.bik,LE2/BASEGAME,30,240,480,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f01_a.bik,LE2/BASEGAME,30,240,480,NO,YES,YES,"Exactly the same as f01, just with audio"
+load_f02.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f02b.bik,LE2/BASEGAME,30,279,558,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f02c.bik,LE2/BASEGAME,30,230,460,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f02d.bik,LE2/BASEGAME,30,279,558,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f02e.bik,LE2/BASEGAME,30,239,478,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f03.bik,LE2/BASEGAME,30,241,482,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f03b.bik,LE2/BASEGAME,30,300,600,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f05.bik,LE2/BASEGAME,30,134,268,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f06.bik,LE2/BASEGAME,30,120,240,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f07.bik,LE2/BASEGAME,30,300,600,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f07b.bik,LE2/BASEGAME,30,285,570,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f08.bik,LE2/BASEGAME,30,215,430,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f08b.bik,LE2/BASEGAME,30,214,428,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f08c.bik,LE2/BASEGAME,30,214,428,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f08d.bik,LE2/BASEGAME,30,270,540,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f09.bik,LE2/BASEGAME,30,230,460,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f09d.bik,LE2/BASEGAME,30,228,456,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f10.bik,LE2/BASEGAME,30,271,542,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f10b.bik,LE2/BASEGAME,30,270,540,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f10c.bik,LE2/BASEGAME,30,271,542,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f10d.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f11.bik,LE2/BASEGAME,30,272,544,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f12.bik,LE2/BASEGAME,30,230,460,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f12c.bik,LE2/BASEGAME,30,280,560,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13.bik,LE2/BASEGAME,30,230,460,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13b.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13c.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13d.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13e.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13f.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13g.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13h.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13i.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13j.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13k.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13l.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f13m.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f14.bik,LE2/BASEGAME,30,272,544,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f15.bik,LE2/BASEGAME,30,233,466,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f17.bik,LE2/BASEGAME,30,181,362,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f17b.bik,LE2/BASEGAME,30,181,362,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f17c.bik,LE2/BASEGAME,30,181,362,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f17d.bik,LE2/BASEGAME,30,181,362,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f19.bik,LE2/BASEGAME,29.97,300,600,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f19b.bik,LE2/BASEGAME,30,300,600,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f21.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f22.bik,LE2/BASEGAME,30,231,462,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+load_f98.bik,LE2/BASEGAME,30,27,54,NO,YES,YES,Unused in-game
+load_f99.bik,LE2/BASEGAME,29.97,90,180,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+Mass_Effect_2_Logo.bik,LE2/BASEGAME,30,240,480,YES (BIK ONLY),NO,NO,Made from scratch in After Effects
+ME1_CharImport_LoadLoop.bik,LE2/BASEGAME,30,240,480,YES (BIK ONLY),NO,NO,Made from scratch in After Effects
+ME2_Opening_SunMid.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,"This is a duplicate of ME2_Opening_SunMid_INT, so we copy that one"
+ME2_Opening_SunMid_DEU.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+ME2_Opening_SunMid_ESN.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+ME2_Opening_SunMid_FRA.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+ME2_Opening_SunMid_INT.bik,LE2/BASEGAME,30,627,1254,YES,NO,NO,
+ME2_Opening_SunMid_ITA.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+ME2_Opening_SunMid_POL.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+ME2_Opening_SunMid_RUS.bik,LE2/BASEGAME,30,627,1254,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version
+OmgHub_approach_shot01.bik,LE2/BASEGAME,30,646,1292,YES,NO,NO,
+OmgHub_Depart.bik,LE2/BASEGAME,30,253,506,YES,NO,NO,
+Opening_End_Seq.bik,LE2/BASEGAME,30,3305,6610,YES,NO,NO,
+Opening_End_SeqFM.bik,LE2/BASEGAME,30,3305,6610,YES,NO,NO,
+Opening_Seq_DEU.bik,LE2/BASEGAME,30,2888,5776,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version - Only Lipsync sections stored in MOV
+Opening_Seq_FRA.bik,LE2/BASEGAME,30,2888,5776,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version - Only Lipsync sections stored in MOV
+Opening_Seq_INT.bik,LE2/BASEGAME,30,2888,5776,YES,NO,NO,
+Opening_Seq_ITA.bik,LE2/BASEGAME,30,2888,5776,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version - Only Lipsync sections stored in MOV
+Opening_Seq_POL.bik,LE2/BASEGAME,30,2888,5776,YES (BIK ONLY),YES,NO,Made in After Effects based on INT version - Only Lipsync sections stored in MOV
+ProCer_300_FirstFlight.bik,LE2/BASEGAME,30,1275,2550,YES,NO,NO,
+ProCer_300_NorReveal.bik,LE2/BASEGAME,30,909,1818,YES,NO,NO,
+ProCer_300_Transfer_pt1.bik,LE2/BASEGAME,30,430,860,YES,NO,NO,
+ProCer_300_Transfer_pt2.bik,LE2/BASEGAME,30,238,476,YES,NO,NO,
+ProNorEscape.bik,LE2/BASEGAME,30,458,916,YES,NO,NO,
+ProNorEscapeAsh.bik,LE2/BASEGAME,30,458,916,YES,NO,NO,
+ProNorEscapeKaid.bik,LE2/BASEGAME,30,458,916,YES,NO,NO,
+ProNor_Pod2.bik,LE2/BASEGAME,30,658,1316,YES,NO,NO,
+ProNor_Shepard_Rebuilt.bik,LE2/BASEGAME,30,1839,3678,YES,NO,NO,
+PrsCva_100_Arrival.bik,LE2/BASEGAME,30,119,238,YES,NO,NO,
+QuaTiL_100_arrival_pt_1.bik,LE2/BASEGAME,30,203,406,YES,NO,NO,
+QuaTiL_100_arrival_pt_2.bik,LE2/BASEGAME,30,127,254,YES,NO,NO,
+QuaTiL_100_arrival_pt_3.bik,LE2/BASEGAME,30,286,572,YES,NO,NO,
+QuaTiL_400_ShipTransfer1.bik,LE2/BASEGAME,30,255,510,YES,NO,NO,
+QuaTiL_400_ShipTransfer2.bik,LE2/BASEGAME,30,174,348,YES,NO,NO,
+RprGta_100_Arrival_Pt01.bik,LE2/BASEGAME,30,220,440,YES,NO,NO,
+RprGta_100_Arrival_Pt02_01.bik,LE2/BASEGAME,30,80,160,YES,NO,NO,
+RprGta_100_Arrival_Pt02_02.bik,LE2/BASEGAME,30,113,226,YES,NO,NO,
+RprGta_100_Arrival_Pt02_03.bik,LE2/BASEGAME,30,100,200,YES,NO,NO,
+RprGta_430_Depature_Joker.bik,LE2/BASEGAME,30,130,260,YES,NO,NO,
+RprGta_430_RprCollapse.bik,LE2/BASEGAME,30,120,240,YES,NO,NO,
+ShpCr2_100_Arrival_Part1.bik,LE2/BASEGAME,30,179,358,YES,NO,NO,
+ShpCr2_100_Arrival_Part3.bik,LE2/BASEGAME,30,234,468,YES,NO,NO,
+ShpCr2_100_Arrival_Part5.bik,LE2/BASEGAME,30,906,1812,YES,NO,NO,
+ShpCR2_100_escape_part1.bik,LE2/BASEGAME,30,204,408,YES,NO,NO,
+ShpCR2_100_escape_part2.bik,LE2/BASEGAME,30,129,258,YES,NO,NO,
+ShpCR2_100_escape_part3.bik,LE2/BASEGAME,30,194,388,YES,NO,NO,
+ShpCR2_100_escape_part4.bik,LE2/BASEGAME,30,33,66,YES,NO,NO,
+ShpCR2_100_escape_part5.bik,LE2/BASEGAME,30,383,766,YES,NO,NO,
+TwrAsA_101_ArrivalTower.bik,LE2/BASEGAME,30,191,382,YES,NO,NO,
+TwrAsA_HubDepature.bik,LE2/BASEGAME,30,298,596,YES,NO,NO,
+TWRHuB_Arrival.bik,LE2/BASEGAME,30,592,1184,YES,NO,NO,
+TWRHub_Dept.bik,LE2/BASEGAME,30,363,726,YES,NO,NO,
+Twr_CityFlyThrough_05.bik,LE2/BASEGAME,30,259,518,YES,NO,NO,
+visionavi.bik,LE2/BASEGAME,30,209,418,NO,NO,NO,Beacon vision videos not suited for interpolation
+Montage_1.bik,LE2/KASUMI,30,378,756,YES,NO,NO,
+Montage_2.bik,LE2/KASUMI,30,459,918,YES,NO,NO,
+Saren_pan.bik,LE2/KASUMI,30,252,504,YES,NO,NO,
+EXP_Part01lvl3ShutArrival.bik,LE2/LOTSB,30,898,1796,YES,NO,NO,
+EXP_Part01lvl3ShutArrivalPt2.bik,LE2/LOTSB,30,134,268,YES,NO,NO,
+EXP_Part01_CarCrashBink.bik,LE2/LOTSB,30,654,1308,YES,NO,NO,
+load_f60.bik,LE2/LOTSB,30,269,538,NO,NO,YES,"Loading screens already excellent quality, and not suited for interpolation"
+UNC1Base1_WideExplosion.bik,LE2/OVERLORD,30,131,262,YES,NO,NO,
+Cat002_100_Arrival.bik,LE3/BASEGAME,30,207,414,YES,NO,NO,
+Cat003_100_DockArv.bik,LE3/BASEGAME,30,1217,2434,YES,NO,NO,
+Cat004_arrival_pt1.bik,LE3/BASEGAME,30,175,350,YES,NO,NO,
+Cat004_arrival_pt3.bik,LE3/BASEGAME,30,484,968,YES,NO,NO,
+Cat004_Cit_Close.bik,LE3/BASEGAME,30,762,1524,YES,NO,NO,
+Cat004_Loop.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,
+CerJcb_Arrival_pt2.bik,LE3/BASEGAME,30,343,686,YES,NO,NO,
+CerJcb_Depart_pt1.bik,LE3/BASEGAME,30,175,350,YES,NO,NO,
+CerJcb_Depart_pt2.bik,LE3/BASEGAME,30,99,198,YES,NO,NO,
+Cithub_Load01.bik,LE3/BASEGAME,30,156,312,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load02.bik,LE3/BASEGAME,30,156,312,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load03.bik,LE3/BASEGAME,30,241,482,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load04.bik,LE3/BASEGAME,30,241,482,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load05.bik,LE3/BASEGAME,30,156,312,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load06.bik,LE3/BASEGAME,30,241,482,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load07.bik,LE3/BASEGAME,30,241,482,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Cithub_Load08.bik,LE3/BASEGAME,30,241,482,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Device_Complete.bik,LE3/BASEGAME,30,628,1256,YES,NO,NO,
+Device_Reveal.bik,LE3/BASEGAME,30,919,1838,YES,NO,NO,
+End001_ShuttleDown_End.bik,LE3/BASEGAME,30,261,522,YES,NO,NO,
+End001_ShuttleDown_Start.bik,LE3/BASEGAME,30,195,390,YES,NO,NO,
+End002_Smls_Tunnel.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,
+End004.bik,LE3/BASEGAME,30,2251,4502,YES,NO,NO,
+End01_HammerFail.bik,LE3/BASEGAME,30,1604,3208,YES,NO,NO,
+End01_HammerIntro.bik,LE3/BASEGAME,30,1512,3024,YES,NO,NO,
+End01_HammerLand.bik,LE3/BASEGAME,30,1673,3346,YES,NO,NO,
+End01_Sheild_Intro.bik,LE3/BASEGAME,30,2071,4142,YES,NO,NO,
+End01_Sword_Bad_Pt1.bik,LE3/BASEGAME,30,147,294,YES,NO,NO,
+End01_Sword_Bad_Pt2.bik,LE3/BASEGAME,30,987,1974,YES,NO,NO,
+End01_Sword_Descent.bik,LE3/BASEGAME,30,592,1184,YES,NO,NO,
+End01_Sword_Good.bik,LE3/BASEGAME,30,922,1844,YES,NO,NO,
+End01_Sword_intro_pt10.bik,LE3/BASEGAME,30,1278,2556,YES,NO,NO,
+End01_Sword_intro_pt2.bik,LE3/BASEGAME,30,443,886,YES,NO,NO,
+End01_Sword_intro_pt3AD.bik,LE3/BASEGAME,30,480,960,YES,NO,NO,
+End01_Sword_intro_pt3DA.bik,LE3/BASEGAME,30,480,960,YES,NO,NO,
+End01_Sword_intro_pt4G.bik,LE3/BASEGAME,30,419,838,YES,NO,NO,
+End01_Sword_intro_pt4Q.bik,LE3/BASEGAME,30,419,838,YES,NO,NO,
+End01_Sword_intro_pt6.bik,LE3/BASEGAME,30,696,1392,YES,NO,NO,
+End01_Sword_intro_pt8.bik,LE3/BASEGAME,30,737,1474,YES,NO,NO,
+End02_Cit_Flower.bik,LE3/BASEGAME,30,644,1288,YES,NO,NO,
+End03_Anderson_Short.bik,LE3/BASEGAME,30,151,302,YES,NO,NO,
+End03_B_SphereExp.bik,LE3/BASEGAME,30,358,716,YES,NO,NO,
+End03_Device_Dock.bik,LE3/BASEGAME,30,1395,2790,YES,NO,NO,
+End03_Flashback_Anderson.bik,LE3/BASEGAME,30,102,204,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Ash.bik,LE3/BASEGAME,30,76,152,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Joker.bik,LE3/BASEGAME,30,97,194,YES,NO,NO,
+End03_Flashback_Kaiden.bik,LE3/BASEGAME,30,76,152,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Liara.bik,LE3/BASEGAME,30,76,152,YES,NO,NO,
+End03_G_SphereExp.bik,LE3/BASEGAME,30,567,1134,YES,NO,NO,
+End03_Im_Short.bik,LE3/BASEGAME,30,151,302,YES,NO,NO,
+End03_LondonBlue.bik,LE3/BASEGAME,30,357,714,YES,NO,NO,
+End03_LondonBlueBad.bik,LE3/BASEGAME,30,768,1536,YES,NO,NO,
+End03_LondonBlueGood.bik,LE3/BASEGAME,30,768,1536,YES,NO,NO,
+End03_LondonBlueOutro.bik,LE3/BASEGAME,30,1499,2998,YES,NO,NO,
+End03_LondonGreen.bik,LE3/BASEGAME,30,357,714,YES,NO,NO,
+End03_LondonGreenGood.bik,LE3/BASEGAME,30,757,1514,YES,NO,NO,
+End03_LondonGreenOutro.bik,LE3/BASEGAME,30,1821,3642,YES,NO,NO,
+End03_LondonIntro.bik,LE3/BASEGAME,30,335,670,YES,NO,NO,
+End03_LondonRed.bik,LE3/BASEGAME,30,357,714,YES,NO,NO,
+End03_LondonRedGood.bik,LE3/BASEGAME,30,764,1528,YES,NO,NO,
+End03_LondonRedOutro.bik,LE3/BASEGAME,30,1996,3992,YES,NO,NO,
+End03_LondonRedVap.bik,LE3/BASEGAME,30,764,1528,YES,NO,NO,
+End03_R_SphereExp.bik,LE3/BASEGAME,30,603,1206,YES,NO,NO,
+End03_Shepard_Alive_Fem.bik,LE3/BASEGAME,30,660,1320,YES,NO,NO,
+End03_Shepard_Alive_Male.bik,LE3/BASEGAME,30,660,1320,YES,NO,NO,
+End3_LondonRedBad.bik,LE3/BASEGAME,30,764,1528,YES,NO,NO,
+Ght002_Geth_Death.bik,LE3/BASEGAME,30,1384,2768,YES,NO,NO,
+GLO_01_Relay.bik,LE3/BASEGAME,30,273,546,YES,NO,NO,
+Gth001_Arrival_Pt1.bik,LE3/BASEGAME,30,465,930,YES,NO,NO,
+Gth001_Arrival_pt2.bik,LE3/BASEGAME,30,571,1142,YES,NO,NO,
+Gth001_Depart.bik,LE3/BASEGAME,30,958,1916,YES,NO,NO,
+Gth002_QuarBomb_Gun.bik,LE3/BASEGAME,30,241,482,YES,NO,NO,
+Gth002_Quar_Death.bik,LE3/BASEGAME,30,2068,4136,YES,NO,NO,
+GthLeg_Admiral_GTHShip1.bik,LE3/BASEGAME,30,417,834,YES,NO,NO,
+GthLeg_Admiral_GTHShip2.bik,LE3/BASEGAME,30,296,592,YES,NO,NO,
+Kro001_100_SurArrival_Animatic.bik,LE3/BASEGAME,30,238,476,YES,NO,NO,
+Kro001_100_SurArrival_pt2.bik,LE3/BASEGAME,30,193,386,YES,NO,NO,
+Kro001_ExoIntro_Drop.bik,LE3/BASEGAME,30,94,188,YES,NO,NO,
+Kro002_Convoy_PR.bik,LE3/BASEGAME,30,91,182,YES,NO,NO,
+Kro002_CurePR_01.bik,LE3/BASEGAME,30,182,364,YES,NO,NO,
+Kro002_CurePR_03.bik,LE3/BASEGAME,30,362,724,YES,NO,NO,
+Kro002_Cure_PR.bik,LE3/BASEGAME,30,320,640,YES,NO,NO,
+Kro002_Fight_pt1.bik,LE3/BASEGAME,30,323,646,YES,NO,NO,
+Kro002_Fight_pt2.bik,LE3/BASEGAME,30,248,496,YES,NO,NO,
+Kro002_Fight_Pt3.bik,LE3/BASEGAME,30,697,1394,YES,NO,NO,
+KroGar_100_Arrival.bik,LE3/BASEGAME,30,1648,3296,YES,NO,NO,
+load_f01.bik,LE3/BASEGAME,30,295,590,YES,NO,NO,
+ME3_ProCit_Loop.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,
+norend_hackett_Speech_Geth.bik,LE3/BASEGAME,30,148,296,YES,NO,NO,
+NorEnd_Hackett_Speech_Intro.bik,LE3/BASEGAME,30,461,922,YES,NO,NO,
+norend_hackett_Speech_quarian.bik,LE3/BASEGAME,30,153,306,YES,NO,NO,
+norend_hackett_Speech_turian.bik,LE3/BASEGAME,30,209,418,YES,NO,NO,
+NorKro_SummitVid_Mordin.bik,LE3/BASEGAME,30,355,710,YES,NO,NO,
+NorKro_SummitVid_Padok.bik,LE3/BASEGAME,30,353,706,YES,NO,NO,
+Nor_CIC.bik,LE3/BASEGAME,30,90,180,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+Nor_PreHenchmanSelect.bik,LE3/BASEGAME,30,157,314,YES,NO,NO,
+OmgJck_Arrival_Pt1.bik,LE3/BASEGAME,30,659,1318,YES,NO,NO,
+OmgJck_Arrival_Pt2.bik,LE3/BASEGAME,30,522,1044,YES,NO,NO,
+ProCit_100_Arrival.bik,LE3/BASEGAME,30,1727,3454,YES,NO,NO,
+ProCit_Arrival_Generic.bik,LE3/BASEGAME,30,263,526,YES,NO,NO,
+proear_intro_Animatic.bik,LE3/BASEGAME,30,1152,2304,YES,NO,NO,
+ProEar_Intro_Pt2.bik,LE3/BASEGAME,30,532,1064,YES,NO,NO,
+ProEar_Intro_Pt2_Fem.bik,LE3/BASEGAME,30,532,1064,YES,NO,NO,
+ProEar_Intro_Pt4.bik,LE3/BASEGAME,30,428,856,YES,NO,NO,
+ProEar_Intro_Pt6.bik,LE3/BASEGAME,30,478,956,YES,NO,NO,
+ProEar_Intro_Pt6_Fem.bik,LE3/BASEGAME,30,478,956,YES,NO,NO,
+ProEar_Intro_Pt8.bik,LE3/BASEGAME,30,1661,3322,YES,NO,NO,
+ProMar_Arrival_pt1.bik,LE3/BASEGAME,30,1012,2024,YES,NO,NO,
+ProMar_Arrival_pt2.bik,LE3/BASEGAME,30,291,582,YES,NO,NO,
+ProMar_Depart.bik,LE3/BASEGAME,30,212,424,YES,NO,NO,
+ProMar_EscapePt2_Joker.bik,LE3/BASEGAME,30,67,134,YES,NO,NO,
+ProMar_Escapept4_Est.bik,LE3/BASEGAME,30,111,222,YES,NO,NO,
+ProMar_IM_Cutaway.bik,LE3/BASEGAME,30,112,224,YES,NO,NO,
+ProMar_Smls_Load.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,
+Smls_2_Loop.bik,LE3/BASEGAME,30,160,320,YES,NO,NO,
+Smls_Conduit.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,
+Smls_Kro001.bik,LE3/BASEGAME,30,145,290,YES,NO,NO,
+Smls_NorFTL.bik,LE3/BASEGAME,30,265,530,YES,NO,NO,
+Smls_NorLoopLF.bik,LE3/BASEGAME,30,200,400,YES,NO,NO,
+Smls_NorLoopRt.bik,LE3/BASEGAME,30,200,400,YES,NO,NO,
+Smls_OmgJck.bik,LE3/BASEGAME,30,180,360,YES,NO,NO,
+Smls_ShutLoop_Kro002.bik,LE3/BASEGAME,30,167,334,YES,NO,NO,
+Smls_ShutSpace_LF.bik,LE3/BASEGAME,30,239,478,YES,NO,NO,
+Smls_ShutSpace_RT.bik,LE3/BASEGAME,30,239,478,YES,NO,NO,
+StartupLoop.bik,LE3/BASEGAME,30,150,300,YES,NO,NO,"Almost no motion, not worth interpolating"
+StartupLoop_a.bik,LE3/BASEGAME,30,150,300,YES (BIK ONLY),YES,NO,"This is a duplicate of StartupLoop, just with audio mixed in"
+Cit001_BarIntroEstablishing.bik,LE3/CITADEL,30,614,1228,YES,NO,NO,
+Cit001_FF_distraction.bik,LE3/CITADEL,30,231,462,YES,NO,NO,
+cit003_begin_assault_1.bik,LE3/CITADEL,30,118,236,YES,NO,NO,
+cit003_begin_assault_2.bik,LE3/CITADEL,30,88,176,YES,NO,NO,
+cit003_begin_assault_3.bik,LE3/CITADEL,30,98,196,YES,NO,NO,
+cit003_cit001_door_flashback.bik,LE3/CITADEL,30,248,496,YES,NO,NO,
+Cit004_CloneEnd_Part2.bik,LE3/CITADEL,30,239,478,YES,NO,NO,
+Cit004_EpilogueMercDrones.bik,LE3/CITADEL,30,135,270,YES,NO,NO,
+Cit004_NormandyDepart.bik,LE3/CITADEL,30,440,880,YES,NO,NO,
+Cit004_NormandyDockReturn.bik,LE3/CITADEL,30,449,898,YES,NO,NO,
+Cit004_normandyfly1.bik,LE3/CITADEL,30,184,368,YES,NO,NO,
+Cit004_normandyfly2.bik,LE3/CITADEL,30,276,552,YES,NO,NO,
+Cit004_normandyfly3.bik,LE3/CITADEL,30,96,192,YES,NO,NO,
+Cit004_normandyfly4.bik,LE3/CITADEL,30,298,596,YES,NO,NO,
+Cit004_normandyfly5.bik,LE3/CITADEL,30,258,516,YES,NO,NO,
+Cit004_normandyfly6.bik,LE3/CITADEL,30,36,72,YES,NO,NO,
+Cit004_normandyfly7.bik,LE3/CITADEL,30,247,494,YES,NO,NO,
+CitAptBench_SmlsLoad.bik,LE3/CITADEL,30,235,470,YES,NO,NO,
+CitAptBench_SmlsLoad_F.bik,LE3/CITADEL,30,235,470,YES,NO,NO,
+CitApt_SmlsLoad.bik,LE3/CITADEL,30,272,544,YES,NO,NO,
+CitApt_Turian_Shot.bik,LE3/CITADEL,30,133,266,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+CitApt_Volus.bik,LE3/CITADEL,30,125,250,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+CitSimBench_SmlsLoad.bik,LE3/CITADEL,30,235,470,YES,NO,NO,
+CitSimBench_SmlsLoad_F.bik,LE3/CITADEL,30,235,470,YES,NO,NO,
+CitSim_SmlsLoad.bik,LE3/CITADEL,30,300,600,YES,NO,NO,
+CitSTREET_SmlsLoad.bik,LE3/CITADEL,30,569,1138,YES,NO,NO,
+Cit_LoopingRedCar.bik,LE3/CITADEL,30,199,398,YES,NO,NO,
+Cit_loopingShuttle.bik,LE3/CITADEL,30,199,398,YES,NO,NO,
+Cortez_shuttle_leave.bik,LE3/CITADEL,30,160,320,YES,NO,NO,
+Cortez_shuttle_spin.bik,LE3/CITADEL,30,199,398,YES,NO,NO,
+Grunt_Hospital.bik,LE3/CITADEL,30,161,322,YES,NO,NO,
+Grunt_Statue.bik,LE3/CITADEL,30,131,262,YES,NO,NO,
+Grunt_Throw.bik,LE3/CITADEL,29.97,75,150,YES (BIK ONLY),YES,NO,"In-game remake video made, not upscaled, already pre-validated"
+JokerTale_Part1.bik,LE3/CITADEL,30,970,1940,YES,NO,NO,
+JokerTale_Part2.bik,LE3/CITADEL,30,293,586,YES,NO,NO,
+JokerTale_Part3.bik,LE3/CITADEL,30,737,1474,YES,NO,NO,
+AshFlashBack_Death.bik,LE3/EXTENDED CUT,30,97,194,YES (BIK ONLY),YES,NO,"Identical to End03_Flashback_Ash from BASEGAME, so we duplicate it"
+End002_Crush.bik,LE3/EXTENDED CUT,30,2147,4294,YES,NO,NO,
+End002_Vis_BlueBad.bik,LE3/EXTENDED CUT,30,165,330,YES (BIK ONLY),YES,NO,Made from scratch in After Effects (from other EC videos)
+End002_Vis_GreenGood.bik,LE3/EXTENDED CUT,30,165,330,YES (BIK ONLY),YES,NO,Made from scratch in After Effects (from other EC videos)
+End002_Vis_RedBad.bik,LE3/EXTENDED CUT,30,165,330,YES (BIK ONLY),YES,NO,Made from scratch in After Effects (from other EC videos)
+End002_Vis_RedVap.bik,LE3/EXTENDED CUT,30,165,330,YES (BIK ONLY),YES,NO,Made from scratch in After Effects (from other EC videos)
+End03_CDS_CrewChase.bik,LE3/EXTENDED CUT,30,227,454,YES,NO,NO,
+End03_CD_Sham.bik,LE3/EXTENDED CUT,30,248,496,YES,NO,NO,
+End03_CD_ThessiaTuchTrans.bik,LE3/EXTENDED CUT,30,230,460,YES,NO,NO,
+End03_C_Earth_CitSurReapers.bik,LE3/EXTENDED CUT,30,501,1002,YES,NO,NO,
+End03_C_FlashForward_JackGrave.bik,LE3/EXTENDED CUT,30,150,300,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_C_FlashForward_JackGrissom.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_FlashForward_JacobLondon.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_FlashForward_KasumiSit.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_FlashForward_MirandaBase.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_FlashForward_MordinStudies.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_FlashForward_SamDaughter.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_C_LondonRio_Outro.bik,LE3/EXTENDED CUT,30,905,1810,YES,NO,NO,
+End03_C_MRDes_Good.bik,LE3/EXTENDED CUT,30,1387,2774,YES,NO,NO,
+End03_C_MR_Rebuild.bik,LE3/EXTENDED CUT,30,674,1348,YES,NO,NO,
+End03_C_NorEst.bik,LE3/EXTENDED CUT,30,112,224,YES,NO,NO,
+End03_C_NormandyChaseExt.bik,LE3/EXTENDED CUT,30,792,1584,YES,NO,NO,
+End03_C_NorRetreatGood.bik,LE3/EXTENDED CUT,30,468,936,YES,NO,NO,
+End03_C_RanGA_GethReapers.bik,LE3/EXTENDED CUT,30,311,622,YES,NO,NO,
+End03_C_ShamIntro.bik,LE3/EXTENDED CUT,30,206,412,YES,NO,NO,
+End03_Device_Dock_Bad.bik,LE3/EXTENDED CUT,30,2011,4022,YES,NO,NO,
+End03_D_CitPieces.bik,LE3/EXTENDED CUT,30,525,1050,YES,NO,NO,
+End03_D_CoatesRebHi.bik,LE3/EXTENDED CUT,30,333,666,YES,NO,NO,
+End03_D_CoatesRebMin.bik,LE3/EXTENDED CUT,30,330,660,YES,NO,NO,
+End03_D_Drift.bik,LE3/EXTENDED CUT,30,1532,3064,YES,NO,NO,
+End03_D_FlashForward_JackLI.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FlashForward_JacobTeacher.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FlashForward_MirandaLI.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FlashForward_MirandaVan.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FlashForward_SamJust.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FlashForward_ZaeedSit.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_FleetIntro.bik,LE3/EXTENDED CUT,30,1177,2354,YES,NO,NO,
+End03_D_FutureEarth.bik,LE3/EXTENDED CUT,30,516,1032,YES,NO,NO,
+End03_D_LondonRioWorst_Outro.bik,LE3/EXTENDED CUT,30,720,1440,YES,NO,NO,
+End03_D_LondonRio_IntroShort.bik,LE3/EXTENDED CUT,30,431,862,YES,NO,NO,
+End03_D_LondonRio_Outro.bik,LE3/EXTENDED CUT,30,720,1440,YES,NO,NO,
+End03_D_MRDes_Good.bik,LE3/EXTENDED CUT,30,1588,3176,YES,NO,NO,
+End03_D_NorEst.bik,LE3/EXTENDED CUT,30,112,224,YES,NO,NO,
+End03_D_NormandyChaseExt.bik,LE3/EXTENDED CUT,30,764,1528,YES,NO,NO,
+End03_D_NorRetreatGood.bik,LE3/EXTENDED CUT,30,1147,2294,YES,NO,NO,
+End03_D_RanQA_QuarCity.bik,LE3/EXTENDED CUT,30,323,646,YES,NO,NO,
+End03_D_RanQA_QuarCity_short.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_D_RanQGD_WasteLand.bik,LE3/EXTENDED CUT,30,233,466,YES,NO,NO,
+End03_D_ShamIntro.bik,LE3/EXTENDED CUT,30,206,412,YES,NO,NO,
+End03_D_TutCF_Rachni.bik,LE3/EXTENDED CUT,30,202,404,YES,NO,NO,
+End03_D_TutCF_TutBarren.bik,LE3/EXTENDED CUT,30,205,410,YES,NO,NO,
+End03_D_TutCF_WasteLand.bik,LE3/EXTENDED CUT,30,288,576,YES,NO,NO,
+End03_D_TutCF_WreaveWasteLand.bik,LE3/EXTENDED CUT,30,283,566,YES,NO,NO,
+End03_D_TutCT_Baby.bik,LE3/EXTENDED CUT,30,231,462,YES,NO,NO,
+End03_D_TutCT_EveBaby.bik,LE3/EXTENDED CUT,30,231,462,YES,NO,NO,
+End03_D_TutCT_KroganChildren.bik,LE3/EXTENDED CUT,30,231,462,YES,NO,NO,
+End03_D_TutCT_TutRebuild.bik,LE3/EXTENDED CUT,30,283,566,YES,NO,NO,
+End03_D_TutCT_WreaveLand.bik,LE3/EXTENDED CUT,30,308,616,YES,NO,NO,
+End03_D_TutCT_WreaveWarDebate.bik,LE3/EXTENDED CUT,30,322,644,YES,NO,NO,
+End03_D_TutCT_WreaveWarRally.bik,LE3/EXTENDED CUT,30,353,706,YES,NO,NO,
+End03_D_TutCT_WrexGruntLand.bik,LE3/EXTENDED CUT,30,262,524,YES,NO,NO,
+End03_D_TutCT_WrexLand.bik,LE3/EXTENDED CUT,30,262,524,YES,NO,NO,
+End03_Flashback_Cortez.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_EDI.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Garrus.bik,LE3/EXTENDED CUT,30,97,194,YES,NO,NO,
+End03_Flashback_Grunt.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_JackME3.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Jacob.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_James.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Javick.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Legion.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Miranda.bik,LE3/EXTENDED CUT,30,98,196,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Mordin.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Samara.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Tali.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Thane.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Traynor.bik,LE3/EXTENDED CUT,30,76,152,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_Flashback_Wrex.bik,LE3/EXTENDED CUT,30,97,194,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_HelmDeath.bik,LE3/EXTENDED CUT,30,346,692,YES,NO,NO,
+End03_NorDepart.bik,LE3/EXTENDED CUT,30,681,1362,YES,NO,NO,
+End03_NorEstablish.bik,LE3/EXTENDED CUT,30,498,996,YES,NO,NO,
+End03_OO_Liara.bik,LE3/EXTENDED CUT,30,486,972,YES,NO,NO,
+End03_SC_LondonRio_IntroShort.bik,LE3/EXTENDED CUT,30,424,848,YES,NO,NO,
+End03_S_CoatesReb.bik,LE3/EXTENDED CUT,30,333,666,YES,NO,NO,
+End03_S_DNA.bik,LE3/EXTENDED CUT,30,1316,2632,YES,NO,NO,
+End03_S_FlashForward_JackGrave.bik,LE3/EXTENDED CUT,30,150,300,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+End03_S_FlashForward_JackGrissom.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_s_FlashForward_JacobLondon.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_S_FlashForward_KasumiKeiji.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_S_FlashForward_MirandaVan.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_S_FlashForward_SamDaughter.bik,LE3/EXTENDED CUT,30,150,300,YES,NO,NO,
+End03_S_FutureCity.bik,LE3/EXTENDED CUT,30,605,1210,YES,NO,NO,
+End03_S_LondonRio_Outro.bik,LE3/EXTENDED CUT,30,919,1838,YES,NO,NO,
+End03_S_MRDes_Good.bik,LE3/EXTENDED CUT,30,2143,4286,YES,NO,NO,
+End03_S_NorEst.bik,LE3/EXTENDED CUT,30,112,224,YES,NO,NO,
+End03_S_NormandyChaseExt.bik,LE3/EXTENDED CUT,30,706,1412,YES,NO,NO,
+End03_S_NorRetreatGood.bik,LE3/EXTENDED CUT,30,930,1860,YES,NO,NO,
+End03_S_RanGA_GethRpr.bik,LE3/EXTENDED CUT,30,311,622,YES,NO,NO,
+End03_S_RanQGA_NoMask.bik,LE3/EXTENDED CUT,30,300,600,YES,NO,NO,
+End03_S_TutCT_Baby.bik,LE3/EXTENDED CUT,30,231,462,YES,NO,NO,
+End03_S_TutCT_EveBaby.bik,LE3/EXTENDED CUT,30,231,462,YES,NO,NO,
+End03_S_TutCT_TutRebuild.bik,LE3/EXTENDED CUT,30,283,566,YES,NO,NO,
+End03_S_TutCT_WreaveLand.bik,LE3/EXTENDED CUT,30,262,524,YES,NO,NO,
+End03_S_TutCT_WrexLand.bik,LE3/EXTENDED CUT,30,262,524,YES,NO,NO,
+End03_S_Tut_FutureCity.bik,LE3/EXTENDED CUT,30,198,396,YES,YES,NO,"Non-interpolated master is 15fps to remove duplicate frames, so ignore false positive"
+EveFlashBack_Death.bik,LE3/EXTENDED CUT,30,97,194,YES (BIK ONLY),YES,NO,
+KaidanFlashBack_Death.bik,LE3/EXTENDED CUT,30,97,194,YES (BIK ONLY),YES,NO,"Identical to End03_Flashback_Kaidan from BASEGAME, so we duplicate it"
+LiaraFlashBack_Death.bik,LE3/EXTENDED CUT,30,97,194,YES (BIK ONLY),YES,NO,"Identical to End03_Flashback_Liara from BASEGAME, so we duplicate it"
+OptOut_NewFinale.bik,LE3/EXTENDED CUT,30,1833,3666,YES,NO,NO,
+Cat001_Prothean_FlashBack1.bik,LE3/FROM ASHES,30,530,1060,YES,NO,NO,
+Cat001_Prothean_FlashBack1_Outro.bik,LE3/FROM ASHES,30,232,464,YES,NO,NO,
+Cat001_Prothean_FlashBack2.bik,LE3/FROM ASHES,30,181,362,YES,NO,NO,
+Cat001_Prothean_FlashBack2b.bik,LE3/FROM ASHES,30,131,262,YES,NO,NO,
+Cat001_Prothean_FlashBack2_Outro.bik,LE3/FROM ASHES,30,205,410,YES,NO,NO,
+DLC_Cat001_Fb1_Ingame.bik,LE3/FROM ASHES,30,119,238,NO,YES,YES,Unused in-game
+DLC_Cat001_Fb2_Ingame.bik,LE3/FROM ASHES,30,100,200,NO,YES,YES,Unused in-game
+PostCat1_VisionBink.bik,LE3/FROM ASHES,30,209,418,NO,NO,NO,Beacon vision videos not suited for interpolation
+Lev002_Asteroid_Arrival.bik,LE3/LEVIATHAN,30,252,504,YES,NO,NO,
+Lev002_Asteroid_Depart.bik,LE3/LEVIATHAN,30,115,230,YES,NO,NO,
+Lev002_LoopingLoad.bik,LE3/LEVIATHAN,30,151,302,YES,NO,NO,
+Lev003_DigSite_Arrival.bik,LE3/LEVIATHAN,30,195,390,YES,NO,NO,
+Lev004_LeviathansReveal.bik,LE3/LEVIATHAN,30,431,862,YES,NO,NO,
+Lev004_WW_ArrivalCrash1.bik,LE3/LEVIATHAN,30,129,258,YES,NO,NO,
+Lev004_WW_ArrivalCrash2.bik,LE3/LEVIATHAN,30,22,44,YES,NO,NO,
+Lev004_WW_ArrivalCrash3.bik,LE3/LEVIATHAN,30,57,114,YES,NO,NO,
+Lev004_WW_ArrivalCrash4.bik,LE3/LEVIATHAN,30,261,522,YES,NO,NO,
+Lev004_WW_CortezInsert.bik,LE3/LEVIATHAN,30,67,134,YES,NO,NO,
+Lev004_WW_DescentBelow1.bik,LE3/LEVIATHAN,30,241,482,YES,NO,NO,
+Lev004_WW_DescentBelow2.bik,LE3/LEVIATHAN,30,244,488,YES,NO,NO,
+Lev004_WW_DescentLoop.bik,LE3/LEVIATHAN,30,317,634,YES,NO,NO,
+Lev004_WW_DescentSurface1.bik,LE3/LEVIATHAN,30,246,492,YES,NO,NO,
+Lev004_WW_DescentSurface2.bik,LE3/LEVIATHAN,30,158,316,YES,NO,NO,
+Lev004_WW_EscapeBelow1.bik,LE3/LEVIATHAN,30,282,564,YES,NO,NO,
+Lev004_WW_EscapeLoop.bik,LE3/LEVIATHAN,30,149,298,YES,NO,NO,
+Lev004_WW_EscapeSurface1.bik,LE3/LEVIATHAN,30,98,196,YES,NO,NO,
+Lev004_WW_EscapeSurface2.bik,LE3/LEVIATHAN,30,209,418,YES,NO,NO,
+Lev004_WW_EscapeSurface3.bik,LE3/LEVIATHAN,30,71,142,YES,NO,NO,
+Lev004_WW_EscapeSurface4.bik,LE3/LEVIATHAN,30,950,1900,YES,NO,NO,
+WaterWorldArrivalPart1.bik,LE3/LEVIATHAN,30,299,598,YES,NO,NO,
+load_OMG_1toHub.bik,LE3/OMEGA,30,148,296,YES,NO,NO,
+load_OMG_3to4.bik,LE3/OMEGA,30,130,260,YES,NO,NO,
+load_OMG_Hubto2a.bik,LE3/OMEGA,30,130,260,YES,NO,NO,
+load_OMG_Hubto3.bik,LE3/OMEGA,30,130,260,YES,NO,NO,
+omg003_barriers_afterlife.bik,LE3/OMEGA,30,89,178,YES,NO,NO,
+omg003_barriers_market.bik,LE3/OMEGA,30,71,142,YES,NO,NO,
+omg003_barriers_mech.bik,LE3/OMEGA,30,154,308,YES,NO,NO,
+omg003_barriers_vista.bik,LE3/OMEGA,30,138,276,YES,NO,NO,
+omg02A_speech_general.bik,LE3/OMEGA,30,137,274,YES,NO,NO,
+omg02A_speech_market.bik,LE3/OMEGA,30,115,230,YES,NO,NO,
+omg02A_speech_tech.bik,LE3/OMEGA,30,136,272,YES,NO,NO,
+omg02A_speech_vista.bik,LE3/OMEGA,30,118,236,YES,NO,NO,
+OmgIntro_001_StealthEntry.bik,LE3/OMEGA,29.97,431,862,YES,NO,NO,
+OmgIntro_002_HeadforCmdShp.bik,LE3/OMEGA,29.97,203,406,YES,NO,NO,
+OmgIntro_003_SneakApproach.bik,LE3/OMEGA,29.97,127,254,YES,NO,NO,
+OmgIntro_004_TakeOutCmdShpA.bik,LE3/OMEGA,29.97,214,428,YES,NO,NO,
+OmgIntro_005_TakeOutCmdShpB.bik,LE3/OMEGA,29.97,231,462,YES,NO,NO,
+OmgIntro_006_FleetJoins.bik,LE3/OMEGA,29.97,256,512,YES,NO,NO,
+OmgIntro_007_Cannon.bik,LE3/OMEGA,29.97,160,320,YES,NO,NO,
+OmgIntro_008_OmegaAttacks.bik,LE3/OMEGA,29.97,196,392,YES,NO,NO,
+OmgIntro_009_PodEject.bik,LE3/OMEGA,29.97,155,310,YES,NO,NO,
+OmgIntro_010_PodCrash.bik,LE3/OMEGA,29.97,191,382,YES,NO,NO,
