@@ -1,4 +1,4 @@
-# Build via this command: py -m PyInstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --add-data "banner.png;." ALOVBatchBinker1.3.py
+# Build via this command: py -m PyInstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --add-data "banner.png;." ALOVBatchBinker1.4.py
 
 import sys
 import os
@@ -307,7 +307,7 @@ class BinkerWorker(QThread):
 class ALOVBatchBinker(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("ALOV Batch Binker v1.3")
+        self.setWindowTitle("ALOV Batch Binker v1.4")
         self.resize(1100, 850)
 
         self.config = load_config()
@@ -564,7 +564,7 @@ class ALOVBatchBinker(QMainWindow):
             self.progress_bar.setValue(self.progress_bar.maximum())
 
 if __name__ == "__main__":
-    myappid = 'alov.batchbinker.v1.3'
+    myappid = 'alov.batchbinker.v1.4'
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     app = QApplication(sys.argv)
 
