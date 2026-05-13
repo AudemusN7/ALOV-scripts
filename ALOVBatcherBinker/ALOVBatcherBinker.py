@@ -6,18 +6,32 @@ import glob
 import ctypes
 import subprocess
 import json
-import traceback
+import html
 import time
 from datetime import datetime
-from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
-                             QHBoxLayout, QPushButton, QTextEdit, QLabel, 
+from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
+                             QHBoxLayout, QPushButton, QTextEdit, QLabel,
                              QFileDialog, QGroupBox, QLineEdit, QSizePolicy,
                              QDialog, QFormLayout, QDialogButtonBox, QProgressBar,
                              QCheckBox, QComboBox, QSpinBox)
 from PySide6.QtCore import QThread, Signal, Qt, QTimer
-from PySide6.QtGui import QColor, QFont, QPixmap, QIcon
+from PySide6.QtGui import QFont, QPixmap, QIcon, QIntValidator
 
 CONFIG_FILE = "alov_binker_config.json"
+DEFAULT_CONFIG = {
+    "BINK_EXE_PATH": "",
+    "FFPROBE_EXE_PATH": "",
+    "INPUT_DIR": "",
+    "OUTPUT_DIR": "",
+    "DATA_RATE": "4500000",
+    "PEAK_RATE": "8000000",
+    "PREVIEW_FRAMES": 32,
+    "BINK_VERSION": 200,
+    "OUTPUT_FRAMERATE": "",
+    "OUTPUT_WIDTH": "",
+    "OUTPUT_HEIGHT": "",
+    "SHOW_WINDOW": False
+}
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
@@ -28,55 +42,65 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 def load_config():
+    config = DEFAULT_CONFIG.copy()
     if os.path.exists(CONFIG_FILE):
         try:
             with open(CONFIG_FILE, 'r') as f:
-                return json.load(f)
-        except: pass
-    return {
-        "BINK_EXE_PATH": "", 
-        "FFPROBE_EXE_PATH": "",
-        "INPUT_DIR": "", 
-        "OUTPUT_DIR": "",
-        "DATA_RATE": "4500000",
-        "PEAK_RATE": "8000000",
-        "PREVIEW_FRAMES": 32,
-        "BINK_VERSION": 200,
-        "SHOW_WINDOW": False
-    }
+                loaded_config = json.load(f)
+            if isinstance(loaded_config, dict):
+                config.update(loaded_config)
+        except (OSError, json.JSONDecodeError):
+            pass
+    return config
 
 def save_config(config):
     with open(CONFIG_FILE, 'w') as f:
         json.dump(config, f, indent=4)
 
+def clean_int_text(value, default=""):
+    text = str(value).strip()
+    return text if text.isdigit() else default
+
+def clean_positive_int(value, default):
+    text = clean_int_text(value)
+    return int(text) if text else default
+
 class ResizableBanner(QLabel):
     def __init__(self, pixmap, parent=None):
         super().__init__(parent)
         self.original_pixmap = pixmap
-        self.setMinimumSize(1, 1) 
+        self.setMinimumSize(1, 1)
         self.setAlignment(Qt.AlignCenter)
 
     def resizeEvent(self, event):
         if not self.original_pixmap.isNull():
             scaled_pixmap = self.original_pixmap.scaled(
-                self.width(), 400, 
-                Qt.KeepAspectRatio, 
+                self.width(), 400,
+                Qt.KeepAspectRatio,
                 Qt.SmoothTransformation
             )
             self.setPixmap(scaled_pixmap)
 
 class ConfigDialog(QDialog):
-    def __init__(self, data_rate, peak_rate, preview_frames, bink_version, parent=None):
+    def __init__(self, data_rate, peak_rate, preview_frames, bink_version,
+                 output_framerate, output_width, output_height, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Bink Encoding Settings")
         layout = QFormLayout(self)
 
-        self.data_rate_le = QLineEdit(str(data_rate))
-        self.peak_rate_le = QLineEdit(str(peak_rate))
+        bitrate_validator = QIntValidator(1, 999999999, self)
+        resize_validator = QIntValidator(1, 32768, self)
+        framerate_validator = QIntValidator(1, 240, self)
+
+        self.data_rate_le = QLineEdit(clean_int_text(data_rate, "4500000"))
+        self.data_rate_le.setValidator(bitrate_validator)
+
+        self.peak_rate_le = QLineEdit(clean_int_text(peak_rate, "8000000"))
+        self.peak_rate_le.setValidator(bitrate_validator)
 
         self.preview_sb = QSpinBox()
         self.preview_sb.setRange(2, 64)
-        self.preview_sb.setValue(int(preview_frames))
+        self.preview_sb.setValue(clean_positive_int(preview_frames, 32))
 
         self.version_cb = QComboBox()
         self.version_map = {
@@ -89,15 +113,29 @@ class ConfigDialog(QDialog):
         for text, val in self.version_map.items():
             self.version_cb.addItem(text, val)
 
-        # Set currently selected version
-        idx = self.version_cb.findData(int(bink_version))
+        idx = self.version_cb.findData(clean_positive_int(bink_version, 200))
         if idx >= 0:
             self.version_cb.setCurrentIndex(idx)
+
+        self.output_framerate_le = QLineEdit(clean_int_text(output_framerate))
+        self.output_framerate_le.setPlaceholderText("Leave blank to keep source")
+        self.output_framerate_le.setValidator(framerate_validator)
+
+        self.output_width_le = QLineEdit(clean_int_text(output_width))
+        self.output_width_le.setPlaceholderText("Leave blank to keep source")
+        self.output_width_le.setValidator(resize_validator)
+
+        self.output_height_le = QLineEdit(clean_int_text(output_height))
+        self.output_height_le.setPlaceholderText("Leave blank to keep source")
+        self.output_height_le.setValidator(resize_validator)
 
         layout.addRow("Data Rate (/d):", self.data_rate_le)
         layout.addRow("Peak Rate (/m):", self.peak_rate_le)
         layout.addRow("Preview Frames (/p):", self.preview_sb)
         layout.addRow("Bink Version (/v):", self.version_cb)
+        layout.addRow("Output Frame Rate (/a):", self.output_framerate_le)
+        layout.addRow("Output Width (/():", self.output_width_le)
+        layout.addRow("Output Height (/)):", self.output_height_le)
 
         buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, self)
         buttons.accepted.connect(self.accept)
@@ -105,23 +143,30 @@ class ConfigDialog(QDialog):
         layout.addRow(buttons)
 
     def get_values(self):
-        return (self.data_rate_le.text(), 
-                self.peak_rate_le.text(), 
-                self.preview_sb.value(), 
-                self.version_cb.currentData())
+        return (self.data_rate_le.text(),
+                self.peak_rate_le.text(),
+                self.preview_sb.value(),
+                self.version_cb.currentData(),
+                self.output_framerate_le.text().strip(),
+                self.output_width_le.text().strip(),
+                self.output_height_le.text().strip())
 
 class BinkerWorker(QThread):
     log_signal = Signal(str, str)
     finished_signal = Signal(int, int)
     progress_signal = Signal(int, int, int, int) # (Current File, Total Files, ETA Seconds, Percentage)
 
-    def __init__(self, config, data_rate, peak_rate, preview_frames, bink_version, show_window):
+    def __init__(self, config, data_rate, peak_rate, preview_frames, bink_version,
+                 output_framerate, output_width, output_height, show_window):
         super().__init__()
         self.config = config
         self.data_rate = data_rate
         self.peak_rate = peak_rate
         self.preview_frames = preview_frames
         self.bink_version = bink_version
+        self.output_framerate = output_framerate
+        self.output_width = output_width
+        self.output_height = output_height
         self.show_window = show_window
         self.counts = {"SUCCESS": 0, "FAILED": 0}
 
@@ -137,7 +182,7 @@ class BinkerWorker(QThread):
 
             mov_files = sorted(glob.glob(os.path.join(input_dir, "*.mov")))
             total_files = len(mov_files)
-            
+
             if not mov_files:
                 self.log_signal.emit("YELLOW", f"No .mov files found in {input_dir}")
                 return
@@ -159,16 +204,16 @@ class BinkerWorker(QThread):
                 try:
                     cmd = [ffprobe_cmd_base, '-v', 'error', '-show_entries', 'format=duration', '-of', 'json', mov_file]
                     result = subprocess.run(cmd, capture_output=True, text=True, startupinfo=si)
-                    
+
                     if result.returncode != 0:
                         raise Exception("ffprobe returned non-zero exit code (is it installed/in PATH?)")
-                    
+
                     probe_data = json.loads(result.stdout)
                     dur = float(probe_data.get('format', {}).get('duration', 0))
-                    
+
                     if dur <= 0:
                         raise ValueError("Invalid duration")
-                    
+
                     file_durations[mov_file] = dur
                     total_video_duration += dur
 
@@ -177,10 +222,8 @@ class BinkerWorker(QThread):
                     has_dynamic_eta = False
                     break
 
-            # Initialize UI Progress (-1 ETA indicates 'Calculating...')
             self.progress_signal.emit(0, total_files, -1, 0 if has_dynamic_eta else -1)
 
-            # Subprocess config for Bink
             bink_si = subprocess.STARTUPINFO()
             if not self.show_window:
                 bink_si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -199,39 +242,43 @@ class BinkerWorker(QThread):
                 output_file = os.path.normpath(os.path.join(output_dir, bik_name))
                 input_file = os.path.normpath(mov_file)
 
-                # Adjusted CMD arguments based on config values
                 cmd = [
-                    exe_path, "Bink2c", input_file, output_file, 
-                    f"/v{self.bink_version}", f"/d{self.data_rate}", f"/m{self.peak_rate}", 
-                    "/l-1", f"/p{self.preview_frames}", "/#" 
+                    exe_path, "Bink2c", input_file, output_file,
+                    f"/v{self.bink_version}", f"/d{self.data_rate}", f"/m{self.peak_rate}",
+                    "/l-1", f"/p{self.preview_frames}", "/#"
                 ]
 
+                if self.output_framerate:
+                    cmd.append(f"/a{self.output_framerate}")
+                if self.output_width:
+                    cmd.append(f"/({self.output_width}")
+                if self.output_height:
+                    cmd.append(f"/){self.output_height}")
+
                 self.log_signal.emit("YELLOW", f"Compressing: {base_name}...")
-                
+
                 start_time = time.time()
 
                 try:
                     result = subprocess.run(
-                        cmd, 
-                        stdout=subprocess.DEVNULL, 
-                        stderr=subprocess.DEVNULL, 
-                        startupinfo=bink_si, 
+                        cmd,
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL,
+                        startupinfo=bink_si,
                         shell=False
                     )
-                    
+
                     elapsed = time.time() - start_time
 
                     if result.returncode == 0:
                         self.counts["SUCCESS"] += 1
                         self.log_signal.emit("GREEN", f"Finished: {bik_name}")
-                        
-                        # --- DYNAMIC ETA UPDATE ---
+
                         if has_dynamic_eta and total_video_duration > 0:
                             completed_video_duration += file_durations[mov_file]
                             total_elapsed_time += elapsed
 
                             if total_elapsed_time > 0 and completed_video_duration > 0:
-                                # Encode speed = Seconds of video processed per real second
                                 speed = completed_video_duration / total_elapsed_time
                                 remaining_video = total_video_duration - completed_video_duration
                                 eta_seconds = int(remaining_video / speed) if speed > 0 else 0
@@ -262,27 +309,29 @@ class ALOVBatchBinker(QMainWindow):
         super().__init__()
         self.setWindowTitle("ALOV Batch Binker v1.3")
         self.resize(1100, 850)
-        
+
         self.config = load_config()
-        self.data_rate = self.config.get("DATA_RATE", "4500000")
-        self.peak_rate = self.config.get("PEAK_RATE", "8000000")
-        self.preview_frames = self.config.get("PREVIEW_FRAMES", 32)
-        self.bink_version = self.config.get("BINK_VERSION", 200)
+        self.data_rate = clean_int_text(self.config.get("DATA_RATE"), "4500000")
+        self.peak_rate = clean_int_text(self.config.get("PEAK_RATE"), "8000000")
+        self.preview_frames = clean_positive_int(self.config.get("PREVIEW_FRAMES"), 32)
+        self.bink_version = clean_positive_int(self.config.get("BINK_VERSION"), 200)
+        self.output_framerate = clean_int_text(self.config.get("OUTPUT_FRAMERATE"))
+        self.output_width = clean_int_text(self.config.get("OUTPUT_WIDTH"))
+        self.output_height = clean_int_text(self.config.get("OUTPUT_HEIGHT"))
         self.show_window = self.config.get("SHOW_WINDOW", False)
 
-        # Setup state for the live countdown timer
         self.remaining_seconds = 0
         self.current_idx = 0
         self.total_count = 0
         self.current_percent = 0
-        
+
         self.countdown_timer = QTimer(self)
         self.countdown_timer.timeout.connect(self.tick_eta)
-        
+
         icon_path = resource_path("icon.ico")
         if os.path.exists(icon_path):
             self.setWindowIcon(QIcon(icon_path))
-        
+
         self.init_ui()
 
     def init_ui(self):
@@ -303,14 +352,14 @@ class ALOVBatchBinker(QMainWindow):
         config_group = QGroupBox("Configuration Paths")
         config_layout = QVBoxLayout()
         self.paths = {}
-        
+
         path_configs = [
             ("BINK_EXE_PATH", "Bink2ForUnreal EXE:"),
             ("FFPROBE_EXE_PATH", "FFprobe EXE (Optional):"),
-            ("INPUT_DIR", "Input Directory:"), 
+            ("INPUT_DIR", "Input Directory:"),
             ("OUTPUT_DIR", "Output Directory:")
         ]
-        
+
         for key, label in path_configs:
             row = QHBoxLayout()
             row.addWidget(QLabel(label))
@@ -323,8 +372,7 @@ class ALOVBatchBinker(QMainWindow):
             row.addWidget(btn)
             self.paths[key] = le
             config_layout.addLayout(row)
-            
-        # Checkbox for Subprocess Window visibility
+
         self.show_window_cb = QCheckBox("Show Bink Compressor Processing Window")
         self.show_window_cb.setChecked(self.show_window)
         self.show_window_cb.stateChanged.connect(self.save_current_config)
@@ -342,7 +390,7 @@ class ALOVBatchBinker(QMainWindow):
         self.config_btn = QPushButton("Configure")
         self.config_btn.setMinimumHeight(35)
         self.config_btn.clicked.connect(self.open_config_dialog)
-        
+
         self.cancel_btn = QPushButton("Abort")
         self.cancel_btn.setMinimumHeight(35)
         self.cancel_btn.setEnabled(False)
@@ -366,7 +414,7 @@ class ALOVBatchBinker(QMainWindow):
         self.log_display.setFont(QFont("Consolas", 10))
         layout.addWidget(self.log_display)
 
-        # Progress Bar 
+        # Progress Bar
         self.progress_bar = QProgressBar()
         self.progress_bar.setRange(0, 100)
         self.progress_bar.setValue(0)
@@ -379,11 +427,28 @@ class ALOVBatchBinker(QMainWindow):
         layout.addWidget(self.status_label)
 
     def open_config_dialog(self):
-        dialog = ConfigDialog(self.data_rate, self.peak_rate, self.preview_frames, self.bink_version, self)
+        dialog = ConfigDialog(self.data_rate, self.peak_rate, self.preview_frames,
+                              self.bink_version, self.output_framerate,
+                              self.output_width, self.output_height, self)
         if dialog.exec():
-            self.data_rate, self.peak_rate, self.preview_frames, self.bink_version = dialog.get_values()
+            (self.data_rate, self.peak_rate, self.preview_frames, self.bink_version,
+             self.output_framerate, self.output_width, self.output_height) = dialog.get_values()
             self.save_current_config()
-            self.status_label.setText(f"Rates updated: {self.data_rate} / {self.peak_rate} | v{self.bink_version} | {self.preview_frames} preview frames")
+
+            output_parts = []
+            if self.output_framerate:
+                output_parts.append(f"{self.output_framerate} fps")
+            if self.output_width and self.output_height:
+                output_parts.append(f"{self.output_width}x{self.output_height}")
+            elif self.output_width:
+                output_parts.append(f"{self.output_width}px wide")
+            elif self.output_height:
+                output_parts.append(f"{self.output_height}px tall")
+            output_summary = " | " + ", ".join(output_parts) if output_parts else ""
+            self.status_label.setText(
+                f"Rates updated: {self.data_rate} / {self.peak_rate} | "
+                f"v{self.bink_version} | {self.preview_frames} preview frames{output_summary}"
+            )
 
     def browse_path(self, key, line_edit):
         if "EXE" in key:
@@ -401,18 +466,23 @@ class ALOVBatchBinker(QMainWindow):
         self.config["PEAK_RATE"] = self.peak_rate
         self.config["PREVIEW_FRAMES"] = self.preview_frames
         self.config["BINK_VERSION"] = self.bink_version
+        self.config["OUTPUT_FRAMERATE"] = self.output_framerate
+        self.config["OUTPUT_WIDTH"] = self.output_width
+        self.config["OUTPUT_HEIGHT"] = self.output_height
         self.config["SHOW_WINDOW"] = self.show_window_cb.isChecked()
         self.show_window = self.show_window_cb.isChecked()
         save_config(self.config)
 
     def append_log(self, status, message):
         timestamp = datetime.now().strftime("%H:%M:%S")
-        color = "#FFFFFF" 
+        color = "#FFFFFF"
         if status == "GREEN": color = "#55FF55"
         elif status == "YELLOW": color = "#FFFF55"
         elif status == "RED": color = "#FF5555"
 
-        log_entry = f'<span style="color:#888888">[{timestamp}]</span> <b style="color:{color}">[{status}]</b> {message}'
+        safe_status = html.escape(status)
+        safe_message = html.escape(message)
+        log_entry = f'<span style="color:#888888">[{timestamp}]</span> <b style="color:{color}">[{safe_status}]</b> {safe_message}'
         self.log_display.append(log_entry)
         self.log_display.verticalScrollBar().setValue(self.log_display.verticalScrollBar().maximum())
 
@@ -451,23 +521,25 @@ class ALOVBatchBinker(QMainWindow):
                 self.progress_bar.setFormat(f"Processing Video {current} of {total} (%p%)")
 
     def start_batch(self):
-        self.save_current_config() 
+        self.save_current_config()
         self.log_display.clear()
         self.run_btn.setEnabled(False)
         self.config_btn.setEnabled(False)
         self.cancel_btn.setEnabled(True)
-        
-        # Reset progress bar state
+
         self.remaining_seconds = 0
         self.current_idx = 0
         self.total_count = 0
         self.current_percent = 0
         self.countdown_timer.stop()
-        
+
         self.progress_bar.setValue(0)
         self.progress_bar.setFormat("Initializing...")
 
-        self.worker = BinkerWorker(self.config, self.data_rate, self.peak_rate, self.preview_frames, self.bink_version, self.show_window)
+        self.worker = BinkerWorker(self.config, self.data_rate, self.peak_rate,
+                                   self.preview_frames, self.bink_version,
+                                   self.output_framerate, self.output_width,
+                                   self.output_height, self.show_window)
         self.worker.log_signal.connect(self.append_log)
         self.worker.progress_signal.connect(self.update_progress)
         self.worker.finished_signal.connect(self.on_finished)
@@ -486,20 +558,20 @@ class ALOVBatchBinker(QMainWindow):
         self.cancel_btn.setEnabled(False)
         self.countdown_timer.stop()
         self.status_label.setText(f"Complete. Success: {success} | Failed: {failed}")
-        
+
         if success + failed > 0:
             self.progress_bar.setFormat("Batch Complete")
             self.progress_bar.setValue(self.progress_bar.maximum())
 
 if __name__ == "__main__":
-    myappid = 'alov.batchbinker.v1.3' 
+    myappid = 'alov.batchbinker.v1.3'
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     app = QApplication(sys.argv)
-    
+
     icon_path = resource_path("icon.ico")
     if os.path.exists(icon_path):
         app.setWindowIcon(QIcon(icon_path))
-        
+
     window = ALOVBatchBinker()
     window.show()
     sys.exit(app.exec())
