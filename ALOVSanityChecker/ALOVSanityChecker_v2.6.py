@@ -1,5 +1,5 @@
 # Minimum requirement: Python 3.10+
-# Build via this command: py -m PyInstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --add-data "banner.png;." ALOVSanityChecker_v2.5.py
+# Build via this command: py -m PyInstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --add-data "banner.png;." ALOVSanityChecker_v2.6.py
 
 import concurrent.futures
 import csv
@@ -91,21 +91,22 @@ class ValidatorWorker(QThread):
     log_signal = Signal(str, str)
     finished_signal = Signal(int, int, int)
 
-    EXPECTED_WIDTH = 3840
-    EXPECTED_HEIGHT = 2160
+    DEFAULT_RESOLUTION = (3840, 2160)
+    ULTRAWIDE_RESOLUTION = (3440, 1440)
     MIN_INTERP_FPS = 59.0
     MAX_INTERP_FPS = 60.0
 
     VALID_PRORES = {"hq", "standard", "apple prores 422 hq", "apple prores 422"}
     VALID_EXCLUSIONS = {"MOV", "BIK", "YES", "NO", ""}
 
-    def __init__(self, target_filter, ignore_rounding, deep_scan, mode, config):
+    def __init__(self, target_filter, ignore_rounding, deep_scan, mode, config, target_resolution=None):
         super().__init__()
         self.target_filter = target_filter
         self.ignore_rounding = ignore_rounding
         self.deep_scan = deep_scan
         self.mode = mode
         self.config = dict(config)
+        self.target_resolution = target_resolution or self.DEFAULT_RESOLUTION
         self.counts = {"GREEN": 0, "YELLOW": 0, "RED": 0}
         self.is_cancelled = False
         self.active_processes = set()
@@ -219,10 +220,11 @@ class ValidatorWorker(QThread):
         meta = self.get_bink_metadata(file_path) if self.mode == "BIK" else self.get_mov_metadata(file_path)
         if meta.error:
             return "RED", f"Metadata Error [{name}]: {meta.error}"
-
+            
         errors = []
-        if meta.width != self.EXPECTED_WIDTH or meta.height != self.EXPECTED_HEIGHT:
-            errors.append(f"Res: {meta.width}x{meta.height}")
+        expected_width, expected_height = self.target_resolution
+        if meta.width != expected_width or meta.height != expected_height:
+            errors.append(f"Res: {meta.width}x{meta.height} (Exp: {expected_width}x{expected_height})")
 
         if self.mode == "MOV":
             prof = meta.codec_profile.lower()
@@ -394,7 +396,7 @@ class ResizableBanner(QLabel):
 class ALOVSanityChecker(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("ALOV Sanity Checker v2.5")
+        self.setWindowTitle("ALOV Sanity Checker v2.6")
         self.resize(1200, 850)
 
         icon_path = resource_path("icon.ico")
@@ -446,6 +448,7 @@ class ALOVSanityChecker(QMainWindow):
         self.archive_selector = QComboBox()
         self.archive_selector.addItems(["ALL", "LE1", "LE2", "LE3"])
         self.ignore_rounding_cb = QCheckBox("Allow +/-1 Frame Mismatch")
+        self.ultrawide_cb = QCheckBox("ALOV Ultrawide Mode")
         self.deep_scan_cb = QCheckBox("Deep Scan")
 
         self.run_btn = QPushButton("Run Check")
@@ -464,6 +467,7 @@ class ALOVSanityChecker(QMainWindow):
         ctrl.addWidget(QLabel("Target:"))
         ctrl.addWidget(self.archive_selector)
         ctrl.addWidget(self.ignore_rounding_cb)
+        ctrl.addWidget(self.ultrawide_cb)
         ctrl.addWidget(self.deep_scan_cb)
         ctrl.addStretch()
         ctrl.addWidget(self.run_btn)
@@ -523,6 +527,11 @@ class ALOVSanityChecker(QMainWindow):
 
         target = self.archive_selector.currentText()
         mode = "MOV" if "MOV" in self.mode_selector.currentText() else "BIK"
+        target_resolution = (
+            ValidatorWorker.ULTRAWIDE_RESOLUTION
+            if self.ultrawide_cb.isChecked()
+            else ValidatorWorker.DEFAULT_RESOLUTION
+        )
         csv_path = self.config.get("CSV_PATH", "")
         root_dir = self.config.get("BINK_ROOT", "") if mode == "BIK" else self.config.get("ARCHIVE_ROOT", "")
 
@@ -542,7 +551,14 @@ class ALOVSanityChecker(QMainWindow):
             self.append_log("RED", f"Failed to initialize log file: {e}")
             self.log_file = None
 
-        self.worker = ValidatorWorker(target, self.ignore_rounding_cb.isChecked(), self.deep_scan_cb.isChecked(), mode, self.config)
+        self.worker = ValidatorWorker(
+            target,
+            self.ignore_rounding_cb.isChecked(),
+            self.deep_scan_cb.isChecked(),
+            mode,
+            self.config,
+            target_resolution,
+        )
         self.worker.log_signal.connect(self.append_log)
         self.worker.finished_signal.connect(self.done)
         self.worker.start()
@@ -564,7 +580,7 @@ class ALOVSanityChecker(QMainWindow):
 
 if __name__ == "__main__":
     if sys.platform == "win32":
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("alov.sanitychecker.v2.5")
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("alov.sanitychecker.v2.6")
     app = QApplication(sys.argv)
     icon_path = resource_path("icon.ico")
     if os.path.exists(icon_path):
